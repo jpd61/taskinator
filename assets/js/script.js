@@ -1,10 +1,10 @@
 var taskIdCounter = 0;
-var tasks = [];
 var formEl = document.querySelector("#task-form");
 var tasksToDoEl = document.querySelector("#tasks-to-do");
 var pageContentEl = document.querySelector("#page-content");
 var tasksInProgressEl = document.querySelector("#tasks-in-progress");
 var tasksCompletedEl = document.querySelector("#tasks-completed");
+var tasks = [];
 
 var taskFormHandler = function (event) {
     event.preventDefault();
@@ -40,6 +40,8 @@ var taskFormHandler = function (event) {
 };
 
 var createTaskEl = function(taskDataObj) {
+    console.log(taskDataObj);
+    console.log(taskDataObj.status);
     // create list item
     var listItemEl = document.createElement("li");
     listItemEl.className = "task-item";
@@ -231,13 +233,13 @@ var dropTaskHandler = function(event) {
     var statusSelectEl = draggableElement.querySelector("select[name='status-change']");
     if (statusType === "tasks-to-do") {
         statusSelectEl.selectedIndex = 0;
-      } 
-      else if (statusType === "tasks-in-progress") {
+    } 
+    else if (statusType === "tasks-in-progress") {
         statusSelectEl.selectedIndex = 1;
-      } 
-      else if (statusType === "tasks-completed") {
+    } 
+    else if (statusType === "tasks-completed") {
         statusSelectEl.selectedIndex = 2;
-      }
+    }
 
     dropZoneEl.removeAttribute("style");
     
