@@ -55,9 +55,6 @@ var createTaskEl = function(taskDataObj) {
 
     listItemEl.appendChild(taskInfoEl);
 
-    console.log(taskDataObj);
-    console.log(taskDataObj.status);
-
     taskDataObj.id = taskIdCounter;
 
     tasks.push(taskDataObj);
