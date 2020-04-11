@@ -116,12 +116,12 @@ var taskButtonHandler = function(event) {
     var targetEl = event.target;
 
     if (targetEl.matches(".edit-btn")) {
-        var taskId = targetEl.getAttribute("data-task-id");
+        let taskId = targetEl.getAttribute("data-task-id");
         editTask(taskId);
     }
     
     else if (event.target.matches(".delete-btn")) {
-        var taskId = event.target.getAttribute("data-task-id");
+        let taskId = event.target.getAttribute("data-task-id");
         deleteTask(taskId);
     }
 };
