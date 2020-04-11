@@ -127,11 +127,11 @@ var taskButtonHandler = function(event) {
 };
 
 var taskStatusChangeHandler = function(event) {
-    var taskId = event.target.getAttribute("data-task-id");
+    let taskId = event.target.getAttribute("data-task-id");
 
-    var statusValue = event.target.value.toLowerCase();
+    let statusValue = event.target.value.toLowerCase();
 
-    var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
+    let taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
 
     if (statusValue === "to do") {
         tasksToDoEl.appendChild(taskSelected);
